@@ -1,13 +1,13 @@
 import Item from './Item';
-import productos from './data.json';
+import products from '../data/products.json';
 
 const List = ({ onProductAdded }) => {
   return (
     <div className="container">
-      {productos.map((producto) => (
+      {products.map((product) => (
         <Item
-          key={producto.id}
-          product={producto}
+          key={product.id}
+          product={product}
           onItemPurchased={onProductAdded}
         />
       ))}
